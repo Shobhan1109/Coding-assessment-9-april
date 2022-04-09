@@ -119,6 +119,7 @@ def register():
             getRemarks = request.form["remark"]
             getDate = str(today)
             print(getDescription)
+
             print(getRemarks)
             print(getDate)
         try:

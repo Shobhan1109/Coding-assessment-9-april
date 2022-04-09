@@ -1,0 +1,29 @@
+{% extends "usernav.html" %}
+{% block content %}
+    <div class="container container">
+
+        <div class="row">
+            <dic class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <form action="/crimereport" method="post">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><B>REGISTER A CRIME</B></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input name ="description" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Remark</td>
+                        <td><input name ="remark" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type ="submit" class="btn btn-primary">REGISTER</button></td>
+                    </tr>
+                </table>
+            </form>
+            </dic>
+        </div>
+    </div>
+{% endblock %}

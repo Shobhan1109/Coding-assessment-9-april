@@ -1,26 +1,25 @@
-{% extends "base.html" %}
+{% extends "usernav.html" %}
 {% block content %}
-
-    <div class="container container">
+<h3 style="text-align: center;"><B></B></h3>
+    <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <form action="/delete" method="post">
+                <form action="/useredit" method="post">
                     <table class="table table-borderless">
                         <tr>
-                            <td><B>DELETE A PATIENT</B></td>
+                            <td><B>EDIT PROFILE</B></td>
                         </tr>
                         <tr>
-                            <td>Mobile number</td>
-                            <td><input name="mobile" type="text" class="form-control"></td>
+                            <td>Name</td>
+                            <td><input name="name" type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><button class="btn btn-danger">DELETE</button></td>
+                            <td><button class="btn btn-dark">UPDATE</button></td>
                         </tr>
                     </table>
                 </form>
             </div>
         </div>
     </div>
-
 {% endblock %}

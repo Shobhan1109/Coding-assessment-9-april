@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><B>CRIME REPORTING APPLICATION</B></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,23 +17,43 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/viewallcrime">View all crimes</a>
+                <a class="nav-link active" aria-current="page" href="/guestreport">Report crime</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/crimesearch">Search a crime</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">Logout</a>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Exit</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <h3><center>ADMIN MODULE</center></h3>
+ <div class="container container">
 
-      {% block content %}
+        <div class="row">
+            <dic class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <form action="/guestreport" method="post">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><B>REGISTER A CRIME</B></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input name ="description" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Remark</td>
+                        <td><input name ="remark" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type ="submit" class="btn btn-primary">REGISTER</button></td>
+                    </tr>
+                </table>
+            </form>
+            </dic>
+        </div>
+    </div>
 
-      {% endblock %}
+
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

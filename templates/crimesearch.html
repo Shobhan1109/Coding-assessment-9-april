@@ -7,14 +7,14 @@
 
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-              <form action="/search" method="post">
+              <form action="/crimesearch" method="post">
                 <table class="table table-borderless">
                   <tr>
-                    <td><B>SEARCH A PATIENT</B></td>
+                    <td><B>SEARCH A CRIME</B></td>
                 </tr>
                 <tr>
-                    <td>Mobile number</td>
-                    <td><input name="mobile" type="text" class="form-control"></td>
+                    <td>Enter date</td>
+                    <td><input name="date" type="text" class="form-control"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -31,26 +31,18 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">Patient name</th>
-                      <th scope="col">Mobile number</th>
-                      <th scope="col">Age</th>
-                      <th scope="col">Address</th>
-                      <th scope="col">Place</th>
-                      <th scope="col">Pincode</th>
-                      <th scope="col">DOB</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {% for i in patient %}
-                    <tr>
-                      <th scope="row">{{ i[1] }}</th>
-                      <td>{{ i[2] }}</td>
-                      <td>{{ i[3] }}</td>
-                      <td>{{ i[4] }}</td>
-                      <td>{{ i[5] }}</td>
-                      <td>{{ i[6] }}</td>
-                      <td>{{ i[7] }}</td>
-                    </tr>
+                            <th scope="col">Description</th>
+                            <th scope="col">Remark</th>
+                            <th scope="col">Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for i in crime %}
+                          <tr>
+                            <th scope="row">{{ i[1] }}</th>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                          </tr>
                     {% endfor %}
                   </tbody>
                 </table>

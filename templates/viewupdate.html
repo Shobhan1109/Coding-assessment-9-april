@@ -1,40 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+    <div class="container container">
+
+        <div class="row">
+            <dic class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <form action="/viewupdate" method="post">
                 <table class="table table-borderless">
                     <tr>
-                        <td><B>UPDATE A PATIENT</B></td>
+                        <td><B>REGISTER A USER</B></td>
                     </tr>
                     <tr>
-                        <td>Patient name</td>
-                        <td><input name ="patname" type="text" class="form-control"></td>
+                        <td>Name</td>
+                        <td><input name ="name" type="text" class="form-control"></td>
+                    </tr>
+                      <tr>
+                        <td>Address</td>
+                        <td><textarea name ="address" type="text" class="form-control" style="height: 200px;width:190px ;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input name ="email" type="text" class="form-control"></td>
                     </tr>
                     <tr>
                         <td>Mobile number</td>
                         <td><input name ="mobile" type="text" class="form-control"></td>
-                    </tr>
-                    <tr>
-                        <td>Age</td>
-                        <td><input name ="age" type="number" class="form-control"></td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td><textarea name ="address" type="text" style="height: 200px;width:200px ;" class="form-control"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Place</td>
-                        <td><input name ="place" type="text" class="form-control"></td>
-                    </tr>
-                    <tr>
-                        <td>Pincode</td>
-                        <td><input name ="pincode" type="text" class="form-control"></td>
-                    </tr>
-                    <tr>
-                        <td>DOB</td>
-                        <td><input name="dob" type="date" class="form-control"></td>
                     </tr>
                     <tr>
                         <td>Password</td>
@@ -46,11 +35,12 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type ="submit" class="btn btn-primary">UPDATE</button></td>
+                        <td><button type ="submit" class="btn btn-primary">REGISTER</button></td>
                     </tr>
-                </table> 
+                </table>
+                <a href="/">Back to login page</a>
+            </form>
+            </dic>
         </div>
     </div>
-</div>
-
 {% endblock %}
